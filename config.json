@@ -1,0 +1,22 @@
+{
+    "account": ["joyjoyj"],
+    "password": ["joyjoy"],
+    "coordinates": {
+        "login": [2286, 1404],
+        "register": [1509, 1222],
+        "acc_create": [1640, 852],
+        "acc_confirm": [1539, 1159],
+        "system": [2397, 1414],
+        "serial_exchange": [1050, 1343],
+        "promo_input": [1521, 1000],
+        "promo_confirm": [1560, 1135],
+        "delete_account": [1989, 799],
+        "password_input": [1629, 868],
+        "confirm_password_input": [1627, 988],
+        "confirm_deletion": [1361, 1104],
+        "final_confirm_deletion": [1343, 1083],
+        "return_to_login": [1512, 731],
+        "clear_cache": [723, 1263],
+        "confirm_clear_cache": [1412, 740]
+    }
+}
