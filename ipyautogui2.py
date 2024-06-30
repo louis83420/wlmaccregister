@@ -16,7 +16,7 @@ def switch_to_english_input():
     pyautogui.press('shift')
     time.sleep(2)  # 增加等待時間到2秒以確保切換完成
 
-def create_account():
+def create_account(character_name):
     # 點擊登入按鈕
     pyautogui.click(*coords['login'])
     time.sleep(1)  # 根據需要調整等待時間
@@ -29,12 +29,24 @@ def create_account():
     pyautogui.click(*coords['acc_create'])
     # 切換輸入法到英語
     switch_to_english_input()
-    #輸入account的內容
+    # 輸入account的內容
     pyautogui.typewrite(account[0], interval=0.1)
     time.sleep(1)
 
     # 點擊acc創建確認按鈕
     pyautogui.click(*coords['acc_confirm'])
+    time.sleep(1)
+
+    # 點擊創建角色按鈕
+    pyautogui.click(*coords['create_character'])
+    time.sleep(1)
+
+    # 點擊命名欄
+    pyautogui.click(*coords['name_field'])
+    # 複製角色名稱到剪貼板
+    pyperclip.copy(character_name)
+    # 貼上角色名稱
+    pyautogui.hotkey('ctrl', 'v')
     time.sleep(1)
 
 def enter_promo_codes():
@@ -118,7 +130,8 @@ if __name__ == "__main__":
     choice = input("請輸入選擇的功能號碼：")
 
     if choice == "1":
-        create_account()
+        character_name = input("你想創建的角色名稱: ")
+        create_account(character_name)
     elif choice == "2":
         enter_promo_codes()
     elif choice == "3":
