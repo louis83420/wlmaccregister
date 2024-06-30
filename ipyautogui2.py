@@ -13,12 +13,9 @@ coords = config['coordinates']
 def switch_to_english_input():
     # 切換輸入法到英語（模擬按下 Shift）
     pyautogui.press('shift')
-    time.sleep(1)  # 等待1秒以確保切換完成
+    time.sleep(2)  # 等待2秒以確保切換完成
 
 def create_account():
-    # 切換輸入法到英語
-    switch_to_english_input()
-    
     # 點擊登入按鈕
     pyautogui.click(*coords['login'])
     time.sleep(1)  # 根據需要調整等待時間
@@ -27,8 +24,11 @@ def create_account():
     pyautogui.click(*coords['register'])
     time.sleep(1)
 
-    # 在acc創建帳號欄位輸入account的內容
+    # 點擊acc創建帳號欄位
     pyautogui.click(*coords['acc_create'])
+    # 切換輸入法到英語
+    switch_to_english_input()
+    #輸入account的內容
     pyautogui.typewrite(account[0], interval=0.1)
     time.sleep(1)
 
