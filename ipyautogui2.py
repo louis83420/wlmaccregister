@@ -11,8 +11,8 @@ password = config['password']
 coords = config['coordinates']
 
 def switch_to_english_input():
-    # 切換輸入法到英語（模擬按下 Alt + Shift）
-    pyautogui.hotkey('alt', 'shift')
+    # 切換輸入法到英語（模擬按下 Shift）
+    pyautogui.press('shift')
     time.sleep(1)  # 等待1秒以確保切換完成
 
 def create_account():
@@ -67,8 +67,7 @@ def enter_promo_codes():
         time.sleep(1)
 
 def delete_account():
-    # 切換輸入法到英語
-    switch_to_english_input()
+    
     
     # 點擊系統按鈕
     pyautogui.click(*coords['system'])
