@@ -31,6 +31,14 @@ def enter_promo_codes():
     # 優惠碼列表
     promo_codes = ["KFGKUJC5R6", "477MQL98YA", "WP6YN23J96", "QGTBR4M4B3", "EZCHE6BAGS", "5VQVYE2NJY", "HTYXCTYY8B", "HN4PDR52VY", "NXAXZERBU5", "K4RQAK6AJ7", "HCNM9VHANB"]
 
+    # 點擊系統按鈕
+    pyautogui.click(system_x, system_y)
+    time.sleep(1)
+    
+    # 點擊序號兌換按鈕
+    pyautogui.click(serial_exchange_x, serial_exchange_y)
+    time.sleep(1)
+
     # 輸入框位置
     x, y = 1521, 1000  # 替換為你的輸入框的實際位置
     # 確定按鈕位置
@@ -55,7 +63,10 @@ def enter_promo_codes():
         time.sleep(1)
 
 def delete_account():
-        # 點擊系統按鈕
+    # 切換輸入法到英語
+    switch_to_english_input()
+    
+    # 點擊系統按鈕
     pyautogui.click(system_x, system_y)
     time.sleep(1)
 
@@ -74,10 +85,6 @@ def delete_account():
     time.sleep(1)
 
     # 點擊刪除確認按鈕
-    pyautogui.click(confirm_deletion_x, confirm_deletion_y)
-    time.sleep(1)
-    
-    # 點擊刪除確認按鈕2
     pyautogui.click(confirm_deletion_x, confirm_deletion_y)
     time.sleep(1)
 
@@ -102,6 +109,8 @@ if __name__ == "__main__":
 
     # 系統按鈕位置
     system_x, system_y = 2397, 1414
+    # 序號兌換按鈕位置
+    serial_exchange_x, serial_exchange_y = 1050, 1343
     # 刪除帳號按鈕位置
     delete_account_x, delete_account_y = 1989, 799
     # 輸入密碼欄位位置
