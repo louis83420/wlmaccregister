@@ -1,6 +1,6 @@
 {
     "account": [
-        "joyjoyj"
+        "joyjoyjo"
     ],
     "password": [
         "joyjoy"
@@ -45,6 +45,34 @@
         "promo_confirm": [
             1560,
             1135
+        ],
+        "close_promo": [
+            1937,
+            829
+        ],
+        "close_system": [
+            2235,
+            518
+        ],
+        "inventory": [
+            1777,
+            1404
+        ],
+        "f_bag": [
+            1606,
+            741
+        ],
+        "set_shortcut": [
+            2234,
+            935
+        ],
+        "s_bag": [
+            1600,
+            1112
+        ],
+        "close_inventory": [
+            2379,
+            530
         ],
         "delete_account": [
             1989,

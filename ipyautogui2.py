@@ -81,6 +81,38 @@ def enter_promo_codes():
 
         # 等待一段時間以確保操作完成（根據需要調整時間）
         time.sleep(1)
+    
+    # 點擊關閉優惠碼頁面
+    pyautogui.click(*coords['close_promo'])
+    time.sleep(1)
+    
+    # 點擊關閉系統頁面
+    pyautogui.click(*coords['close_system'])
+    time.sleep(1)
+    
+    # 點擊物品欄
+    pyautogui.click(*coords['inventory'])
+    time.sleep(1)
+    
+    # 點擊F福袋
+    pyautogui.click(*coords['f_bag'])
+    time.sleep(1)
+    
+    # 點擊設為快捷
+    pyautogui.click(*coords['set_shortcut'])
+    time.sleep(1)
+    
+    # 點擊S福袋
+    pyautogui.click(*coords['s_bag'])
+    time.sleep(1)
+    
+    # 點擊設為快捷
+    pyautogui.click(*coords['set_shortcut'])
+    time.sleep(1)
+    
+    # 點擊關閉物品欄
+    pyautogui.click(*coords['close_inventory'])
+    time.sleep(1)
 
 def delete_account():
     # 點擊系統按鈕
