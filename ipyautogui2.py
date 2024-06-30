@@ -87,6 +87,22 @@ def delete_account():
     # 點擊刪除確認按鈕
     pyautogui.click(confirm_deletion_x, confirm_deletion_y)
     time.sleep(1)
+    
+    # 點擊確認刪除
+    pyautogui.click(final_confirm_deletion_x, final_confirm_deletion_y)
+    time.sleep(1)
+    
+    # 點擊刪除後確認返回登入頁
+    pyautogui.click(return_to_login_x, return_to_login_y)
+    time.sleep(1)
+    
+    # 點擊清除快取
+    pyautogui.click(clear_cache_x, clear_cache_y)
+    time.sleep(1)
+    
+    # 點擊確認清除快取
+    pyautogui.click(confirm_clear_cache_x, confirm_clear_cache_y)
+    time.sleep(1)
 
 # 主程式
 if __name__ == "__main__":
@@ -119,6 +135,14 @@ if __name__ == "__main__":
     confirm_password_input_x, confirm_password_input_y = 1627, 988
     # 刪除確認按鈕位置
     confirm_deletion_x, confirm_deletion_y = 1361, 1104
+    # 確認刪除
+    final_confirm_deletion_x, final_confirm_deletion_y = 1343, 1083
+    # 刪除後確認返回登入頁
+    return_to_login_x, return_to_login_y = 1512, 731
+    # 清除快取
+    clear_cache_x, clear_cache_y = 723, 1263
+    # 確認清除快取
+    confirm_clear_cache_x, confirm_clear_cache_y = 1412, 740
     # 密碼
     password = ["joyjoy"]
 
