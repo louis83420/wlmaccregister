@@ -1,6 +1,7 @@
 import pyautogui
 import time
 import json
+import pyperclip
 
 # 讀取配置文件
 with open('config.json', 'r') as f:
@@ -13,7 +14,7 @@ coords = config['coordinates']
 def switch_to_english_input():
     # 切換輸入法到英語（模擬按下 Shift）
     pyautogui.press('shift')
-    time.sleep(2)  # 等待2秒以確保切換完成
+    time.sleep(2)  # 增加等待時間到2秒以確保切換完成
 
 def create_account():
     # 點擊登入按鈕
@@ -57,8 +58,11 @@ def enter_promo_codes():
         pyautogui.hotkey('ctrl', 'a')
         pyautogui.press('backspace')
 
-        # 輸入優惠碼
-        pyautogui.typewrite(promo_code, interval=0.1)
+        # 複製優惠碼到剪貼板
+        pyperclip.copy(promo_code)
+
+        # 貼上優惠碼
+        pyautogui.hotkey('ctrl', 'v')
 
         # 點擊確定按鈕
         pyautogui.click(*coords['promo_confirm'])
@@ -67,8 +71,6 @@ def enter_promo_codes():
         time.sleep(1)
 
 def delete_account():
-    
-    
     # 點擊系統按鈕
     pyautogui.click(*coords['system'])
     time.sleep(1)
